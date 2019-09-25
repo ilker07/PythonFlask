@@ -1,0 +1,31 @@
+
+{% extends "layoutYeni.html" %}
+
+{% block yer %}
+
+<h3>Makale Gösterme Alanı </h3>
+
+<hr>
+
+{% if articles %}
+<form action="/search" method="post">
+<input class=" form-control-lg form-control-borderless" name="keyword" type="search" placeholder="Ara">
+<button class="btn btn-lg btn-success" type="submit">Ara</button>
+</form>
+<hr>
+
+<ul class="list-group">
+
+{% for eleman  in articles  %}
+ <li class="list-group-item"><a href="article/{{eleman.id}}">{{eleman.title}}</a></li>
+{% endfor %}
+ 
+</ul>
+{% else %}
+<div class="alert alert-danger">Makale yok..</div>
+{% endif %}
+
+
+
+
+{% endblock yer %}

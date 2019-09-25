@@ -1,0 +1,22 @@
+
+{% extends "layoutYeni.html" %}
+
+{% block yer %}
+
+<h3>Giriş Yap </h3>
+<hr>
+{% from "includes/formhelpers.html" import render_field %}
+
+<form method="post">
+
+    
+    {{ render_field(form.kullaniciadi) }}
+    {{ render_field(form.kullaniciSifre) }}
+
+    <button type="submit" class="btn">Giriş Yap</button>
+
+</form>
+
+
+{% endblock yer %}
+

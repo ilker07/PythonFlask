@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{% block baslik %}
+      AnaSayfa
+    {% endblock baslik %}</title>
+</head> 
+<body>
+    <h3>AnaSayfa</h3>
+
+    <p>Sayi :{{deger}} </p>
+
+    <p>Kelime :{{giden.kelime1}} </p>
+    <p>Kelime :{{giden.kelime2}} </p>
+    <p>Kelime :{{giden.kelime3}} </p>
+
+
+    {% block ilker %}
+     <p>
+     İndexin paragraf alani.
+     </p>
+    {% endblock ilker %}
+ 
+</body>
+</html>
+

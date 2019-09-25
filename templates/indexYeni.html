@@ -1,0 +1,35 @@
+{% extends "layoutYeni.html" %}
+
+{% block yer %}
+ <h1>Yerin içindeyim.</h1>
+
+ <div class="jumbotron text-center">  
+  <h3>Hoşgeldiniz</h3>
+  <p>Naber</p>
+ </div>
+
+
+ {% if islem==1 %}
+
+<p>1.işlem</p>
+{% elif islem==2 %}
+
+<p>2.işlem</p>
+{% else %}
+
+<p>Geçersiz işlem</p>
+{% endif %}
+
+<ul>
+  {% for sayi in dizi  %}
+  
+  <ul>
+  <li>{{sayi}}</li>
+  </ul>
+  {% endfor %}
+
+</ul>
+
+
+{% endblock yer %}
+

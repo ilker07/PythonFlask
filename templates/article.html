@@ -1,0 +1,23 @@
+{% extends "layoutYeni.html" %}
+
+
+{% block yer %}
+
+{% if article %}
+
+<h4>Başlık:{{article.title}}</h4>
+<hr>
+
+<h4>Yazar:{{article.author}}</h4>
+<hr>
+
+<h4>İçerik:{{article.content|safe}}</h4>  
+<hr>
+
+<h4>Tarih:{{article.date}}</h4>
+<hr>
+
+{% else %}
+<div class="alert-alert warning">Böyle bir şey yok.</div>
+{% endif %}
+{% endblock yer %}
